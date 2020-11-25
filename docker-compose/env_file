@@ -1,0 +1,11 @@
+# postgres settings
+POSTGRES_DB=postgres
+POSTGRES_USER=postgres
+POSTGRES_HOST=db
+
+# django settings
+ALLOWED_HOSTS=["*"]
+SECRET_KEY=2vahiewp55m9lkz*q!hi5i^nyt&vu#7slol0tm##8i2qynhkrr
+
+# statsd settings
+STATSD_HOST=15.144.16.203

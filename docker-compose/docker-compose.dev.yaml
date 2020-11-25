@@ -1,0 +1,17 @@
+version: "3"
+services:
+  web_1:
+    build: ..
+    image: auth_server_app:dev
+    restart: always
+    environment:
+      PYTHON_ENV: "development"
+      DB_MIGRATE: "migrate"
+    volumes:
+      - ../:/app
+    command: ["pipenv", "run", "python", "manage.py", "runserver", "0.0.0.0:8000"]
+    container_name: auth_server_web_dev
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db

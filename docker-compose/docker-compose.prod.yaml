@@ -1,0 +1,16 @@
+version: "3"
+services:
+  web_1:
+    build: ..
+    image: auth_server_app:prod
+    restart: always
+    environment:
+      PYTHON_ENV: "production"
+      DB_MIGRATE: "migrate"
+    env_file:
+      - env_file
+    container_name: auth_server_web_prod
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db

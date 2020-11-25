@@ -1,0 +1,5 @@
+venv/
+*.log
+docker-compose/
+docs/
+README.md

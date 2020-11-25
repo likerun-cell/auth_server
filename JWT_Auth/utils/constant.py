@@ -1,0 +1,1 @@
+JWT_EXPIRY = 90
